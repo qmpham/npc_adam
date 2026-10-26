@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "npc-adam"
+version = "0.1.0"
+description = "NPC dialogue with MCP memory, LangGraph routing, and prompt token limits"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.20,<2",
+    "langgraph>=1,<2",
+    "openai>=2,<3",
+    "pydantic>=2.10,<3",
+    "tokenizers>=0.21,<1",
+    "httpx>=0.28,<1",
+    "typing-extensions>=4.12,<5",
+]
+
+[tool.setuptools]
+py-modules = ["schemas", "npc_runtime", "mcp_server", "mcp_client"]
